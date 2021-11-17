@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 new AlertDialog.Builder(MainActivity.this)
-                        .setTitle("Delete Recod")
-                        .setMessage("Do you really want to deete this task!")
+                        .setTitle("Delete Record")
+                        .setMessage("Do you really want to delete this task!")
                         .setIcon(R.drawable.ic_baseline_delete_forever_24)
                         .setCancelable(false)
                         .setPositiveButton("Delete", new DialogInterface.OnClickListener() {
