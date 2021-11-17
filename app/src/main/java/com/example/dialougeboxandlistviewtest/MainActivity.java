@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -42,8 +43,16 @@ public class MainActivity extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                frindlist.add(fName.getText().toString());
-                arrayAdapter.notifyDataSetChanged();
+                if (fName.getText().toString().length()>0)
+                {
+                    frindlist.add(fName.getText().toString());
+                    arrayAdapter.notifyDataSetChanged();
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this, "Please Enter the Name!", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
